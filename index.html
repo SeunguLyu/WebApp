@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World in Random Language</title>
+	<style>
+		body {
+			background-color: #4d4dff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+		h1 {
+			color: white;
+			font-size: 4rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		.language {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			font-size: 1rem;
+			padding: 0.5rem;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="hello"></h1>
+	<div class="language" id="language"></div>
+	<script>
+		var languages = ["English", "Spanish", "French", "German", "Italian", "Japanese", "Korean", "Chinese", "Arabic", "Russian"];
+		var hello = document.getElementById("hello");
+		var language = document.getElementById("language");
+		var randomLanguage = languages[Math.floor(Math.random() * languages.length)];
+		switch (randomLanguage) {
+			case "English":
+				hello.innerHTML = "Hello World!";
+				language.innerHTML = "Current language: English";
+				break;
+			case "Spanish":
+				hello.innerHTML = "¡Hola Mundo!";
+				language.innerHTML = "Current language: Spanish";
+				break;
+			case "French":
+				hello.innerHTML = "Bonjour le monde!";
+				language.innerHTML = "Current language: French";
+				break;
+			case "German":
+				hello.innerHTML = "Hallo Welt!";
+				language.innerHTML = "Current language: German";
+				break;
+			case "Italian":
+				hello.innerHTML = "Ciao Mondo!";
+				language.innerHTML = "Current language: Italian";
+				break;
+			case "Japanese":
+				hello.innerHTML = "こんにちは世界！";
+				language.innerHTML = "Current language: Japanese";
+				break;
+			case "Korean":
+				hello.innerHTML = "안녕하세요 세상!";
+				language.innerHTML = "Current language: Korean";
+				break;
+			case "Chinese":
+				hello.innerHTML = "你好，世界！";
+				language.innerHTML = "Current language: Chinese";
+				break;
+			case "Arabic":
+				hello.innerHTML = "مرحبا بالعالم!";
+				language.innerHTML = "Current language: Arabic";
+				break;
+			case "Russian":
+				hello.innerHTML = "Привет мир!";
+				language.innerHTML = "Current language: Russian";
+				break;
+		}
+	</script>
+</body>
+</html>
